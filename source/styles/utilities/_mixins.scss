@@ -1,0 +1,25 @@
+@use 'sass:selector';
+
+/// Write code prefixes
+@mixin Prefix($property, $value) {
+  @each $prefx in $prefixes {
+    -#{$prefx}-#{$property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+@mixin ValuePrefix($property, $value) {
+  @each $prefx in $prefixes {
+    #{$property}: -#{$prefx}-#{$value};
+  }
+  #{$property}: $value;
+}
+
+@mixin FontWeight($weight) {
+  font-variation-settings: 'wght'$weight;
+}
+
+@mixin IconFill {
+  font-variation-settings: 'FILL' 1;
+}

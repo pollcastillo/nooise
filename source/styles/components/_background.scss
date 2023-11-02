@@ -1,0 +1,70 @@
+$blur: 75px;
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    &-layer\: {
+        &blur {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+
+            @include Prefix(backdrop-filter, blur($blur));
+            z-index: 2;
+        }
+
+        &circle {
+            display: block;
+            height: 700px;
+            width: 700px;
+            border-radius: 1000px;
+            z-index: 1;
+
+            &.spin {
+                animation: anSpin 5s linear infinite;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .background {
+        background-color: $slate-100;
+
+        &-layer\: {
+            &blur {
+                background-color: rgba($slate-50, 0.25);
+            }
+
+            &circle {
+                @include ValuePrefix(background-image, linear-gradient($blue-500, $red-500));
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .background {
+        background-color: $slate-900;
+
+        &-layer\: {
+            &blur {
+                background-color: rgba($slate-950, 0.5);
+            }
+
+            &circle {
+                @include ValuePrefix(background-image, linear-gradient($blue-300, $red-500));
+            }
+        }
+    }
+}

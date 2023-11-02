@@ -1,0 +1,25 @@
+.view {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+  }
+
+  &__container {
+      width: 100%;
+  }
+
+  // todo: remove background class from viewFormat
+  .background {
+      position: absolute;
+      z-index: 1;
+  }
+}

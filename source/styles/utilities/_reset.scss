@@ -1,0 +1,43 @@
+* {
+  &,
+  &::after,
+  &::before {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+      font-family: 'Work Sans';
+      /*! Base font size for relative sizes. */
+      font-size: 16px;
+  }
+}
+
+input,
+button {
+  @include Prefix(appearance, none);
+}
+
+// Reset Buttons
+button,
+[type="button"],
+[type="submit"],
+[type="clear"],
+[type="cancel"] {
+  background-color: none;
+  border: 1px solid transparent;
+}
+
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+      background-color: $slate-50;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+      background-color: $slate-900;
+  }
+}

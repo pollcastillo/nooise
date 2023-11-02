@@ -1,0 +1,81 @@
+.hero {
+  font-size: 4.78rem;
+  @include FontWeight($Light);
+}
+
+h1 {
+  font-size: 3.82rem;
+  @include FontWeight($ExtraBold);
+}
+
+h2 {
+  font-size: 3.06rem;
+  @include FontWeight($ExtraBold);
+}
+
+h3 {
+  font-size: 2.44rem;
+  @include FontWeight($Bold);
+}
+
+h4 {
+  font-size: 1.96rem;
+  @include FontWeight($Bold);
+}
+
+h5 {
+  font-size: 1.56rem;
+  @include FontWeight($Bold);
+}
+
+h6 {
+  font-size: 1.25rem;
+  @include FontWeight($Medium);
+}
+
+p {
+  font-size: 1rem;
+  @include FontWeight($Regular);
+}
+
+@media (prefers-color-scheme: light) {
+
+  .hero,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong {
+      color: $slate-800;
+  }
+
+  p,
+  icon,
+  [icon] {
+      color: $slate-600;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .hero,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong {
+      color: $slate-100;
+  }
+
+  p,
+  icon,
+  [icon] {
+      color: $slate-400;
+  }
+}

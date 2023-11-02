@@ -1,0 +1,46 @@
+.splash {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 3.82rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.56rem;
+      text-align: center;
+    }
+
+    .btn {
+      @include ValuePrefix('display', flex);
+      align-self: center;
+      justify-self: center;
+      margin: 24px auto;
+      font-size: 16px;
+      height: 32px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .splash {
+    &__content {
+      h1, p, .btn { color: $white; }
+      .btn { border-color: $white; }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .splash {
+    &__content {
+      h1, p, .btn { color: $white; }
+      .btn { border-color: $white; }
+    }
+  }
+}
