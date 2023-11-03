@@ -1,4 +1,4 @@
-import { type ViewDelegate } from "../tools/Delegates.js";
+import { type ViewDelegate } from "../../tools/Delegates.js";
 import { splashTransmission } from "./SplashTransmission.js";
 
 class View implements ViewDelegate {

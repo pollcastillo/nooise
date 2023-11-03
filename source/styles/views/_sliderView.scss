@@ -1,0 +1,76 @@
+/* Slider view */
+.slider {
+  @include ValuePrefix(display, flex);
+  @include Prefix(flex-direction, column);
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+
+  &__group {
+    &\:navigation {
+      @include ValuePrefix(display, flex);
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 24px;
+      justify-self: flex-end;
+      align-self: flex-end;
+    }
+
+    &\:indicators {
+      margin: 24px 0;
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      &__dot {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        background-color: $slate-500;
+        border-radius: 500px;
+        transition: 0.3s all ease-in-out;
+        cursor: pointer;
+        border: 1px solid $slate-500;
+
+        &:hover {
+          background-color: $slate-400;
+          border: 1px solid $blue-400;
+        }
+
+        &.is--active {
+          width: 20px;
+          height: 20px;
+          background-color: $slate-100;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    padding: 24px;
+
+    h2 {
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

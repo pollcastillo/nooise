@@ -1,3 +1,5 @@
+import { sliderView } from "../slider/SliderView.js";
+
 export function splashTransmission(): void {
   const startBtn = document.getElementById('start');
   
@@ -5,9 +7,9 @@ export function splashTransmission(): void {
     if (!localStorage.nooiseSkipedSlider) {
       startBtn!.classList.add('is--visible');
       startBtn!.addEventListener('click', (): void => {
-        // put here the slider view
+        sliderView.render()
       });
-    } else {} // <-- put here the Home render
+    } else sliderView.render()
   }, 1000);
 
   console.log(startBtn)
