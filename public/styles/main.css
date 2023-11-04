@@ -378,5 +378,21 @@ button,
     transition: 0.3s all ease-in-out;
   }
 }
+@media (prefers-color-scheme: light) {
+  .slider__group\:indicators__dot {
+    background-color: #8497AE;
+    border: 1px solid #657D9A;
+  }
+  .slider__group\:indicators__dot:hover {
+    background-color: #8497AE;
+    border: 1px solid #8497AE;
+  }
+  .slider__group\:indicators__dot.is--active {
+    width: 20px;
+    height: 20px;
+    background-color: #C1CBD7;
+    border-color: #A3B1C2;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
