@@ -74,3 +74,13 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .slider {
+    justify-content: space-between;
+
+    &__content {
+      transition: 0.3s all ease-in-out;
+    }
+  }
+}

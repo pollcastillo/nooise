@@ -201,6 +201,9 @@ button,
   background-color: transparent;
   cursor: pointer;
 }
+.btn.is--hidden {
+  display: none;
+}
 .btn-get__started {
   display: flex;
   align-items: center;
@@ -208,7 +211,21 @@ button,
   border-radius: 100px;
   padding: 8px 16px;
 }
+.btn__slider {
+  display: flex;
+  font-variation-settings: "wght" 700;
+}
 
+@media (prefers-color-scheme: light) {
+  .btn__slider {
+    color: #28323E;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .btn__slider {
+    color: #C1CBD7;
+  }
+}
 .view {
   display: flex;
   flex-direction: row;
@@ -351,6 +368,15 @@ button,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .slider {
+    justify-content: space-between;
+  }
+  .slider__content {
+    transition: 0.3s all ease-in-out;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

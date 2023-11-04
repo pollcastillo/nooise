@@ -3,11 +3,36 @@
   background-color: transparent;
   cursor: pointer;
 
+  &.is--hidden {
+    display: none;
+  }
+
   &-get__started {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
     padding: 8px 16px;
+  }
+
+  &__slider {
+    display: flex;
+    font-variation-settings: 'wght' 700;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .btn {
+    &__slider {
+      color: $slate-800;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    &__slider {
+      color: $slate-200;
+    }
   }
 }

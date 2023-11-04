@@ -39,6 +39,11 @@ class View {
             </div>
           </div>
         </div>
+
+        <div class='background'>
+          <div class='background-layer:blur'></div>
+          <div class='background-layer:circle spin'></div>
+        </div>
       </div>
     `;
     }
