@@ -35,9 +35,9 @@ class View implements ViewDelegate {
 
                 <div class='slider__group:indicators'>
                   <ul>
-                    <li class='slider__group:indicators__dot is--active'></li>
-                    <li class='slider__group:indicators__dot'></li>
-                    <li class='slider__group:indicators__dot'></li>
+                    <li class='slide_indicator slider__group:indicators__dot is--active'></li>
+                    <li class='slide_indicator slider__group:indicators__dot'></li>
+                    <li class='slide_indicator slider__group:indicators__dot'></li>
                   </ul>
                 </div>
               </div>
