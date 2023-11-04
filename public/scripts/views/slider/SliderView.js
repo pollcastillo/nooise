@@ -1,3 +1,4 @@
+import { SliderControl } from "./SliderControllers.js";
 /* @filename: SliderView.ts */
 class View {
     constructor() {
@@ -13,8 +14,8 @@ class View {
             <div class='slider'>
               <div class='slider__group:navigation'>
                 <div class='group-side:left'>
-                  <button class='btn btn__slider'>Omitir</button>
-                  <button class='btn btn__slider is--hidden'>Anterior</button>
+                  <button class='btn btn__slider' id='skip-slider'>Omitir</button>
+                  <button class='btn btn__slider is--hidden' id='prev-slide'>Anterior</button>
                 </div>
 
                 <div class='group-side:left'>
@@ -46,6 +47,10 @@ class View {
         </div>
       </div>
     `;
+        SliderControl.prev();
+        SliderControl.next();
+        SliderControl.finish();
+        SliderControl.skip();
     }
 }
 export const sliderView = new View();
