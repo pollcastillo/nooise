@@ -363,6 +363,7 @@ button,
 }
 .slider__content h2 {
   transition: 0.3s all ease-in-out;
+  margin-bottom: 24px;
 }
 .slider__footer {
   display: flex;
