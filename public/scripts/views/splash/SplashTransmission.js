@@ -11,5 +11,4 @@ export function splashTransmission() {
         else
             sliderView.render();
     }, 1000);
-    console.log(startBtn);
 }

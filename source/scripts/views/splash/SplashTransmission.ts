@@ -11,6 +11,4 @@ export function splashTransmission(): void {
       });
     } else sliderView.render()
   }, 1000);
-
-  console.log(startBtn)
 }

@@ -1,6 +1,7 @@
 // @filename: SliderContoller.ts 
 //
 // 11/04/2023 :36:05
+import { skipSlider } from "./SkipSlider.js";
 class Controller {
     constructor() {
         this.content = {
@@ -25,7 +26,25 @@ class Controller {
     prev() {
         const $ = this.control();
         $.prev.addEventListener('click', () => {
-            console.log('clicked');
+            if (this.sliderIndex > 0) {
+                this.sliderIndex--;
+                if (this.sliderIndex === 1) {
+                    $.content.innerHTML = this.content.s;
+                    $.next.classList.remove('is--hidden');
+                    $.finish.classList.add('is--hidden');
+                    console.log(this.sliderIndex);
+                    $.indicators[this.sliderIndex + 1].classList.remove('is--active');
+                    $.indicators[this.sliderIndex].classList.add('is--active');
+                }
+                else {
+                    $.content.innerHTML = this.content.f;
+                    $.prev.classList.add('is--hidden');
+                    $.skip.classList.remove('is--hidden');
+                    console.log(this.sliderIndex);
+                    $.indicators[this.sliderIndex + 1].classList.remove('is--active');
+                    $.indicators[this.sliderIndex].classList.add('is--active');
+                }
+            }
         });
     }
     next() {
@@ -53,13 +72,13 @@ class Controller {
     skip() {
         const $ = this.control();
         $.skip.addEventListener('click', () => {
-            console.log('clicked');
+            skipSlider();
         });
     }
     finish() {
         const $ = this.control();
         $.finish.addEventListener('click', () => {
-            console.log('clicked');
+            skipSlider();
         });
     }
 }

@@ -3,6 +3,7 @@
 // 11/04/2023 :36:05
 
 import { SliderControllerDelegate } from "../../tools/Delegates";
+import { skipSlider } from "./SkipSlider.js";
 
 class Controller implements SliderControllerDelegate {
   private readonly content = {
@@ -31,7 +32,25 @@ class Controller implements SliderControllerDelegate {
     const $ = this.control();
 
     $.prev!.addEventListener('click', ():void => {
-      console.log('clicked');
+      if (this.sliderIndex > 0) {
+        this.sliderIndex--;
+
+        if (this.sliderIndex === 1) {
+          $.content.innerHTML = this.content.s;
+          $.next!.classList.remove('is--hidden');
+          $.finish!.classList.add('is--hidden');
+          console.log(this.sliderIndex);
+          $.indicators![this.sliderIndex + 1].classList.remove('is--active');
+          $.indicators![this.sliderIndex].classList.add('is--active');
+        } else {
+          $.content.innerHTML = this.content.f;
+          $.prev!.classList.add('is--hidden');
+          $.skip!.classList.remove('is--hidden');
+          console.log(this.sliderIndex);
+          $.indicators![this.sliderIndex + 1].classList.remove('is--active');
+          $.indicators![this.sliderIndex].classList.add('is--active');
+        }
+      }
     });
   }
   
@@ -63,7 +82,7 @@ class Controller implements SliderControllerDelegate {
     const $ = this.control(); 
 
     $.skip!.addEventListener('click', (): void => {
-      console.log('clicked');
+      skipSlider();
     });
   }
 
@@ -71,7 +90,7 @@ class Controller implements SliderControllerDelegate {
     const $ = this.control();
 
     $.finish!.addEventListener('click', (): void => {
-      console.log('clicked');
+      skipSlider();
     });
   }
 }
