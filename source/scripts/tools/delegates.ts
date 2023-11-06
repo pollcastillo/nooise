@@ -12,3 +12,7 @@ export interface SliderControllerDelegate extends ControllerDelegate {
   prev(): void;
   skip(): void;
 }
+
+export interface InterfaceComponent {
+  draw(): void;
+}

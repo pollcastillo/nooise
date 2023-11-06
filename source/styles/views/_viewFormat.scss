@@ -22,4 +22,21 @@
       position: absolute;
       z-index: 1;
   }
+  
+  &.d__view .view__content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 350px 50px;
+
+      div {
+        outline: 1px solid rgba($blue-500, 0.4);
+      }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .view.d__view .view__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 350px 50px;
+  }
 }

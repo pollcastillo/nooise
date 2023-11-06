@@ -1,0 +1,53 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  padding: 16px 0;
+
+  button icon {
+    font-size: 24px;
+    transition: 0.3s all ease;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .navigation {
+    background-color: rgba($slate-50, 0.5);
+    border-right: rgba($slate-50, 0.9);
+  
+    button icon {
+      color: $slate-500;
+  
+      &:hover {
+        color: $slate-600;
+      }
+    }
+  } 
+}
+
+@media (prefers-color-scheme: dark) {
+  .navigation {
+    background-color: rgba($slate-800, 0.5);
+    border-right: rgba($slate-50, 0.9);
+  
+    button icon {
+      color: $slate-400;
+  
+      &:hover {
+        color: $slate-200;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 800px) {
+  .navigation {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 0 32px;
+  }
+}
