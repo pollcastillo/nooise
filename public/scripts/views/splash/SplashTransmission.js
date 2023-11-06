@@ -1,3 +1,4 @@
+import { homeView } from "../home/HomeView.js";
 import { sliderView } from "../slider/SliderView.js";
 export function splashTransmission() {
     const startBtn = document.getElementById('start');
@@ -8,7 +9,8 @@ export function splashTransmission() {
                 sliderView.render();
             });
         }
-        else
-            sliderView.render();
+        else {
+            homeView.render();
+        }
     }, 1000);
 }

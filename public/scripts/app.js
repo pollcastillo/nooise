@@ -1,3 +1,2 @@
-import { sliderView } from "./views/slider/SliderView.js";
-// splashView.render()
-sliderView.render();
+import { splashView } from "./views/splash/SplashView.js";
+splashView.render();

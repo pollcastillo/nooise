@@ -1,5 +1,7 @@
+import { homeView } from "../home/HomeView.js";
 export function skipSlider() {
     if (!localStorage.nooiseSkipedSlider) {
-        localStorage.setItem('nooiseSkipSlider', 'true');
+        localStorage.setItem('nooiseSkipedSlider', 'true');
+        homeView.render();
     }
 }
