@@ -6,7 +6,7 @@ class Component implements InterfaceComponent {
 
     navigationContainer!.innerHTML = `
       <div class='navigation'>
-        <button class='btn btn:navigation btn__navigation is-active' id='get-tracklist'>
+        <button class='btn btn:navigation btn__navigation is--active' id='get-tracklist'>
             <icon>home</icon>
         </button>
 

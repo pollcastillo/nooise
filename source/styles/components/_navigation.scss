@@ -30,12 +30,20 @@
   .navigation {
     background-color: rgba($slate-800, 0.5);
     border-right: rgba($slate-50, 0.9);
-  
-    button icon {
-      color: $slate-400;
-  
-      &:hover {
-        color: $slate-200;
+    
+    button {
+      icon {
+        color: $slate-400;
+    
+        &:hover {
+          color: $slate-200;
+        }
+      }
+
+      &.is--active {
+        icon {
+          color: $slate-50;
+        }
       }
     }
   } 

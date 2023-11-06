@@ -266,6 +266,9 @@ button,
   .navigation button icon:hover {
     color: #C1CBD7;
   }
+  .navigation button.is--active icon {
+    color: #F0F2F5;
+  }
 }
 @media screen and (max-width: 800px) {
   .navigation {
@@ -309,8 +312,7 @@ button,
 
 @media screen and (max-width: 800px) {
   .view.d__view .view__content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 350px 50px;
+    display: flex;
   }
 }
 .splash__content {
