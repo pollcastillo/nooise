@@ -1,4 +1,5 @@
 import { Navigation } from "./components/Navigation/NavigationComponent.js";
+import { Player } from "./components/Player/PlayerComponent.js";
 class View {
     render() {
         const root = document.getElementById('root');
@@ -22,6 +23,7 @@ class View {
         document.querySelector('.view')?.classList.add('d__view');
         // Draw Components
         Navigation.draw();
+        Player.draw();
     }
 }
 export const homeView = new View();

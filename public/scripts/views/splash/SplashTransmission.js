@@ -1,4 +1,4 @@
-import { homeView } from "../home/HomeView.js";
+import { homeView } from "../home/MainView.js";
 import { sliderView } from "../slider/SliderView.js";
 export function splashTransmission() {
     const startBtn = document.getElementById('start');

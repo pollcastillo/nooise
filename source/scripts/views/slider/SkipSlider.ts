@@ -1,4 +1,4 @@
-import { homeView } from "../home/HomeView.js";
+import { homeView } from "../home/MainView.js";
 
 export function skipSlider() {
   if(!localStorage.nooiseSkipedSlider) {

@@ -1,5 +1,6 @@
 import { ViewDelegate } from "../../tools/Delegates";
-import { Navigation } from "./components/NavigationComponent.js";
+import { Navigation } from "./components/Navigation/NavigationComponent.js";
+import { Player } from "./components/Player/PlayerComponent.js";
 
 class View implements ViewDelegate {
   render(): void {
@@ -26,6 +27,7 @@ class View implements ViewDelegate {
 
     // Draw Components
     Navigation.draw();
+    Player.draw();
   }
 
 }

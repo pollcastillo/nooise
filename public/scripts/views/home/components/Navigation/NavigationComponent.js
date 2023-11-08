@@ -1,10 +1,8 @@
-import { InterfaceComponent } from "../../../tools/Delegates";
-
-class Component implements InterfaceComponent {
-  public draw(): void {
-    const navigationContainer = document.getElementById('navigation-container');
-
-    navigationContainer!.innerHTML = `
+import { NavigationController } from "./NavigationController.js";
+class Component {
+    draw() {
+        const navigationContainer = document.getElementById('navigation-container');
+        navigationContainer.innerHTML = `
       <div class='navigation'>
         <button class='btn btn:navigation btn__navigation is--active' id='get-tracklist'>
             <icon>home</icon>
@@ -23,7 +21,8 @@ class Component implements InterfaceComponent {
         </button>
       </div>
     `;
-  }
+        NavigationController.draw(true);
+        NavigationController.control();
+    }
 }
-
-export const Navigation: Component = new Component();
+export const Navigation = new Component();
